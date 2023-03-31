@@ -29,7 +29,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form defaultbutton="SubmitButton" defaultfocus="FirstNameTextBox" id="form1" runat="server">
         <table class="auto-style1">
             <tr>
                 <td class="auto-style3">First Name</td>
@@ -57,7 +57,7 @@
                 <td class="auto-style5">Email</td>
                 <td class="auto-style6">
                     <asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="EmailValidation" runat="server" ErrorMessage="Please enter a last name" ControlToValidate="LastNameTextBox">*</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="EmailValidation" runat="server" ErrorMessage="Please enter an email" ControlToValidate="EmailTextBox">*</asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="EmailTextBox" ErrorMessage="Please enter a vaild email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
                 </td>
             </tr>
