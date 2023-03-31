@@ -18,25 +18,32 @@ namespace WebApplication2
 
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
-            var fName = FirstNameTextBox.Text;
-            var lName = LastNameTextBox.Text;
-            var birthday = BirthdayTextBox.Text;
-            var city = CityDropDown.SelectedValue;
+            Page.Validate();
+            if (Page.IsValid)
+            {
+                var fName = FirstNameTextBox.Text;
+                var lName = LastNameTextBox.Text;
+                var birthday = BirthdayTextBox.Text;
+                var email = EmailTextBox.Text;
+                var city = CityDropDown.SelectedValue;
 
-            DataTable dataTable = new DataTable();
+                DataTable dataTable = new DataTable();
 
-            dataTable.Columns.Add("Name", typeof(string));
-            dataTable.Columns.Add("Birthday", typeof(string));
-            dataTable.Columns.Add("City", typeof(string));
+                dataTable.Columns.Add("Name", typeof(string));
+                dataTable.Columns.Add("Birthday", typeof(string));
+                dataTable.Columns.Add("Email", typeof(string));
+                dataTable.Columns.Add("City", typeof(string));
 
-            dataTable.Rows.Add(
-                fName + " " + lName,
-                birthday,
-                city
-            );
+                dataTable.Rows.Add(
+                    fName + " " + lName,
+                    birthday,
+                    email,
+                    city
+                );
 
-            CustomersGridView.DataSource = dataTable;
-            CustomersGridView.DataBind();
+                CustomersGridView.DataSource = dataTable;
+                CustomersGridView.DataBind();
+            }
         }
     }
 }

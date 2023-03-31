@@ -51,13 +51,13 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox LastNameTextBox;
 
         /// <summary>
-        /// FirstNameValidation0 control.
+        /// LastNameValidation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator FirstNameValidation0;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator LastNameValidation;
 
         /// <summary>
         /// BirthdayTextBox control.
@@ -69,13 +69,13 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox BirthdayTextBox;
 
         /// <summary>
-        /// FirstNameValidation1 control.
+        /// BirthdayValidation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator FirstNameValidation1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator BirthdayValidation;
 
         /// <summary>
         /// CompareValidator1 control.
@@ -87,6 +87,33 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
 
         /// <summary>
+        /// EmailTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
+
+        /// <summary>
+        /// EmailValidation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailValidation;
+
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+
+        /// <summary>
         /// CityDropDown control.
         /// </summary>
         /// <remarks>
@@ -96,13 +123,13 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.DropDownList CityDropDown;
 
         /// <summary>
-        /// FirstNameValidation2 control.
+        /// CityValidation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator FirstNameValidation2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CityValidation;
 
         /// <summary>
         /// SubmitButton control.

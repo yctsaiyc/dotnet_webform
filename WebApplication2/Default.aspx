@@ -42,15 +42,23 @@
                 <td class="auto-style4">Last Name</td>
                 <td>
                     <asp:TextBox ID="LastNameTextBox" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="FirstNameValidation0" runat="server" ErrorMessage="Please enter a last name" ControlToValidate="LastNameTextBox">*</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="LastNameValidation" runat="server" ErrorMessage="Please enter a last name" ControlToValidate="LastNameTextBox">*</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style5">Birthday</td>
                 <td class="auto-style6">
                     <asp:TextBox ID="BirthdayTextBox" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="FirstNameValidation1" runat="server" ErrorMessage="Please enter a birthday" ControlToValidate="BirthdayTextBox">*</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="BirthdayValidation" runat="server" ErrorMessage="Please enter a birthday" ControlToValidate="BirthdayTextBox">*</asp:RequiredFieldValidator>
                     <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="BirthdayTextBox" ErrorMessage="Please enter a valid birthday" Operator="DataTypeCheck" Type="Date">*</asp:CompareValidator>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5">Email</td>
+                <td class="auto-style6">
+                    <asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="EmailValidation" runat="server" ErrorMessage="Please enter a last name" ControlToValidate="LastNameTextBox">*</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="EmailTextBox" ErrorMessage="Please enter a vaild email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -65,7 +73,7 @@
                         <asp:ListItem>Tainan</asp:ListItem>
                         <asp:ListItem>Kaohsiung</asp:ListItem>
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="FirstNameValidation2" runat="server" ErrorMessage="Please select a city" ControlToValidate="CityDropDown">*</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="CityValidation" runat="server" ErrorMessage="Please select a city" ControlToValidate="CityDropDown">*</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -73,6 +81,7 @@
                 <td>
                     <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click" />
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+                    <br />
                     <br />
                     <asp:GridView ID="CustomersGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
                         <AlternatingRowStyle BackColor="White" />
