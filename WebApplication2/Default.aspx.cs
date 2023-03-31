@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.DynamicData;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -14,30 +16,27 @@ namespace WebApplication2
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
             var fName = FirstNameTextBox.Text;
             var lName = LastNameTextBox.Text;
+            var birthday = BirthdayTextBox.Text;
             var city = CityDropDown.SelectedValue;
-            OutputLabel.Text = fName + " " + lName + " " + city;
-            
-            List<string> names = new List<string>();
-            for (int i = 0; i < 10; i++)
-            {
-                names.Add(fName + " " + lName + " " + i);
-            }
-            CustomersGridView.DataSource = names;
-            CustomersGridView.DataBind();
-        }
-        
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+            DataTable dataTable = new DataTable();
+
+            dataTable.Columns.Add("Name", typeof(string));
+            dataTable.Columns.Add("Birthday", typeof(string));
+            dataTable.Columns.Add("City", typeof(string));
+
+            dataTable.Rows.Add(
+                fName + " " + lName,
+                birthday,
+                city
+            );
+
+            CustomersGridView.DataSource = dataTable;
+            CustomersGridView.DataBind();
         }
     }
 }

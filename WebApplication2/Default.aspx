@@ -28,12 +28,21 @@
                 <td class="auto-style3">First Name</td>
                 <td class="auto-style2">
                     <asp:TextBox ID="FirstNameTextBox" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="FirstNameValidation" runat="server" ErrorMessage="Please enter a first name" ControlToValidate="FirstNameTextBox">*</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style4">Last Name</td>
                 <td>
                     <asp:TextBox ID="LastNameTextBox" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="FirstNameValidation0" runat="server" ErrorMessage="Please enter a last name" ControlToValidate="LastNameTextBox">*</asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">Birthday</td>
+                <td>
+                    <asp:TextBox ID="BirthdayTextBox" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="FirstNameValidation1" runat="server" ErrorMessage="Please enter a birthday" ControlToValidate="BirthdayTextBox">*</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -48,6 +57,7 @@
                         <asp:ListItem>Tainan</asp:ListItem>
                         <asp:ListItem>Kaohsiung</asp:ListItem>
                     </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="FirstNameValidation2" runat="server" ErrorMessage="Please select a city" ControlToValidate="CityDropDown">*</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -56,10 +66,7 @@
                     <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click" />
                     <br />
                     <br />
-                    <asp:Label ID="OutputLabel" runat="server"></asp:Label>
-                    <br />
-                    <br />
-                    <asp:GridView ID="CustomersGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                    <asp:GridView ID="CustomersGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
                         <AlternatingRowStyle BackColor="White" />
                         <EditRowStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
