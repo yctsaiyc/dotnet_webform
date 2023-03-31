@@ -18,5 +18,13 @@ namespace WebApplication2
         {
             
         }
+
+        protected void SubmitButton_Click(object sender, EventArgs e)
+        {
+            var fName = FirstNameTextBox.Text;
+            var lName = LastNameTextBox.Text;
+            var city = CityDropDown.SelectedValue;
+            OutputLabel.Text = fName + " " + lName + " " + city;
+        }
     }
 }

@@ -53,7 +53,7 @@
             <tr>
                 <td class="auto-style4">&nbsp;</td>
                 <td>
-                    <asp:Button ID="SubmitButton" runat="server" Text="Submit" />
+                    <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click" />
                     <br />
                     <br />
                     <asp:Label ID="OutputLabel" runat="server"></asp:Label>
