@@ -19,6 +19,13 @@
         .auto-style4 {
             width: 163px;
         }
+        .auto-style5 {
+            width: 163px;
+            height: 38px;
+        }
+        .auto-style6 {
+            height: 38px;
+        }
     </style>
 </head>
 <body>
@@ -39,10 +46,11 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style4">Birthday</td>
-                <td>
+                <td class="auto-style5">Birthday</td>
+                <td class="auto-style6">
                     <asp:TextBox ID="BirthdayTextBox" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="FirstNameValidation1" runat="server" ErrorMessage="Please enter a birthday" ControlToValidate="BirthdayTextBox">*</asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="BirthdayTextBox" ErrorMessage="Please enter a valid birthday" Operator="DataTypeCheck" Type="Date">*</asp:CompareValidator>
                 </td>
             </tr>
             <tr>
@@ -64,7 +72,7 @@
                 <td class="auto-style4">&nbsp;</td>
                 <td>
                     <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click" />
-                    <br />
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
                     <br />
                     <asp:GridView ID="CustomersGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
                         <AlternatingRowStyle BackColor="White" />
