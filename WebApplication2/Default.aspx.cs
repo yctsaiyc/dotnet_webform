@@ -25,6 +25,19 @@ namespace WebApplication2
             var lName = LastNameTextBox.Text;
             var city = CityDropDown.SelectedValue;
             OutputLabel.Text = fName + " " + lName + " " + city;
+            
+            List<string> names = new List<string>();
+            for (int i = 0; i < 10; i++)
+            {
+                names.Add(fName + " " + lName + " " + i);
+            }
+            CustomersGridView.DataSource = names;
+            CustomersGridView.DataBind();
+        }
+        
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
