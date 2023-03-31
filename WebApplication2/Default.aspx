@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication2.Default" %>
 
+<%@ Register src="Header.ascx" tagname="Header" tagprefix="uc1" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,8 +16,7 @@
         }
         .auto-style3 {
             height: 28px;
-            width: 163px;
-        }
+            }
         .auto-style4 {
             width: 163px;
         }
@@ -29,8 +30,13 @@
     </style>
 </head>
 <body>
-    <form defaultbutton="SubmitButton" defaultfocus="FirstNameTextBox" id="form1" runat="server">
+    <form defaultbutton="SubmitButton" id="form1" runat="server">
         <table class="auto-style1">
+            <tr>
+                <td class="auto-style3" colspan="2">
+                    <uc1:Header ID="Header1" runat="server" />
+                </td>
+            </tr>
             <tr>
                 <td class="auto-style3">First Name</td>
                 <td class="auto-style2">
@@ -101,4 +107,5 @@
         </table>
     </form>
 </body>
+<a href="Default.aspx">Default.aspx</a>
 </html>
