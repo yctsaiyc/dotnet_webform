@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="sql.aspx.cs" Inherits="WebApplication2.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SqlDataSource.aspx.cs" Inherits="WebApplication2.WebForm2" %>
 
 <!DOCTYPE html>
 
@@ -41,7 +41,7 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
         <asp:SqlDataSource ID="CustomersSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:NorthwindConnectionString %>" SelectCommand="SELECT [CustomerID], [CompanyName], [ContactName], [Address], [ContactTitle] FROM [Customers] WHERE ([Country] = @Country)">
-            <SelectParameters>
+              <SelectParameters>
                 <asp:ControlParameter ControlID="DropDownList1" DefaultValue="NULL" Name="Country" PropertyName="SelectedValue" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
